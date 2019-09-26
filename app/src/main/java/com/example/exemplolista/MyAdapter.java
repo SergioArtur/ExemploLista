@@ -40,8 +40,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         if(position % 2 == 0){
             ListItem listItem = listItems.get(position);
-            holder.textViewHead.setText(listItem.getHead());
-            holder.textViewDesc.setText(listItem.getDesc());
+            holder.textViewHead.setText(listItem.head);
+            holder.textViewDesc.setText(listItem.desc);
         }
         else{
 

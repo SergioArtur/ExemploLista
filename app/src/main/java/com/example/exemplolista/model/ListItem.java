@@ -1,19 +1,19 @@
 package com.example.exemplolista.model;
 
-public class ListItem {
-    private String head;
-    private String desc;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-    // Constructor
-    public ListItem(String head, String desc) {
-        this.head = head;
-        this.desc = desc;
-    }
-    // Getters
-    public String getHead() {
-        return head;
-    }
-    public String getDesc() {
-        return desc;
-    }
+@Entity(tableName = "list_item")
+public class ListItem {
+
+    @PrimaryKey(autoGenerate = true)
+    public int uid;
+
+
+    @ColumnInfo (name = "head")
+    public String head;
+    @ColumnInfo (name = "desc")
+    public String desc;
+
 }
